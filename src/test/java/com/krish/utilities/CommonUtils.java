@@ -5,7 +5,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.support.PageFactory;
+
 import com.krish.constants.Constants;
+import com.krish.page_objects.DirectoryPage;
+import com.krish.page_objects.HomePage;
+import com.krish.page_objects.LoginPage;
+import com.krish.webdriver_manager.DriverManager;
 
 public class CommonUtils {
 	
@@ -33,9 +39,13 @@ public class CommonUtils {
 		Constants.FIREFOX_DRIVER_LOCATION=properties.getProperty("FIREFOX_DRIVER_LOCATION");
 		Constants.EDGE_DRIVER_LOCATION=properties.getProperty("EDGE_DRIVER_LOCATION");
 		
-		
+	}
 	
+	public void initWebElements() {
 		
+		PageFactory.initElements(DriverManager.getDriver(), LoginPage.class);
+		PageFactory.initElements(DriverManager.getDriver(), HomePage.class);
+		PageFactory.initElements(DriverManager.getDriver(), DirectoryPage.class);
 	}
 
 }

@@ -39,6 +39,7 @@ public class Common_Step_Definition {
 				
 				LOGGER.info("DRIVER is NULL. Instantiating it!");
 			    DriverManager.launchBrowser();
+			    commonUtils.initWebElements();
 			}
 			
 		}
