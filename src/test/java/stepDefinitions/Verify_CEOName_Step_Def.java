@@ -1,11 +1,19 @@
 package stepDefinitions;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
+
+import com.krish.webdriver_manager.DriverManager;
+
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Verify_CEOName_Step_Def {
 
+	
+	//private static final Logger LOGGER = LogManager.getLogger(Verify_CEOName_Step_Def.class);
 	
 	@Given("the user is logged in successfully and is on Home Pages")
 	public void the_user_is_logged_in_successfully_and_is_on_home_pages() {

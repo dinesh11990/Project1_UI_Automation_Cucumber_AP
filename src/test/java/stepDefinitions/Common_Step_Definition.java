@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.krish.constants.Constants;
 import com.krish.utilities.CommonUtils;
+import com.krish.webdriver_manager.DriverManager;
 
 import cucumber.api.java.Before;
 
@@ -16,7 +17,6 @@ public class Common_Step_Definition {
 	
 	//launchBrowser()
 	
-	public static WebDriver driver;
 	
 	private static final Logger LOGGER= LogManager.getLogger(Common_Step_Definition.class);
 	
@@ -35,10 +35,10 @@ public class Common_Step_Definition {
 			
 			
 			LOGGER.info("Checking the Driver is NULL or NOT ?");
-			if(driver==null) {
+			if(DriverManager.getDriver()==null) {
 				
 				LOGGER.info("DRIVER is NULL. Instantiating it!");
-			launchBrowser();
+			    DriverManager.launchBrowser();
 			}
 			
 		}
@@ -49,44 +49,6 @@ public class Common_Step_Definition {
 	}
 
 
-	public void launchBrowser() {
-		// TODO Auto-generated method stub
-		
-		try {
-			
-			switch (Constants.BROWSER) {
-			
-			case "chrome":
-				System.setProperty(Constants.CHROME_DRIVER, Constants.CHROME_DRIVER_LOCATION);
-				LOGGER.info("Launching" + Constants.BROWSER);
-				driver=new ChromeDriver();
-				break;
-			
-			case "firefox":
-				System.setProperty(Constants.FIREFOX_DRIVER, Constants.FIREFOX_DRIVER_LOCATION);
-				LOGGER.info("Launching" + Constants.BROWSER);
-				driver=new ChromeDriver();
-				break;
-			
-			case "ie":
-				System.setProperty(Constants.EDGE_DRIVER, Constants.EDGE_DRIVER_LOCATION);
-				LOGGER.info("Launching" + Constants.BROWSER);
-				driver=new ChromeDriver();
-				break;
-				
-			default:
-				System.setProperty(Constants.CHROME_DRIVER, Constants.CHROME_DRIVER_LOCATION);
-				LOGGER.info("Launching" + Constants.BROWSER);
-				driver=new ChromeDriver();
-				break;
-			}
-			
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
 	
 
 }
