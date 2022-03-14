@@ -2,8 +2,11 @@ package com.krish.page_objects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.krish.utilities.CommonUtils;
+import com.krish.webdriver_manager.DriverManager;
 
 public class LoginPage {
 
@@ -57,8 +60,15 @@ public class LoginPage {
 	//Writing actions in the page class
 	
 	public void enterUserName(String userName) {
-		CommonUtils.getInstance().highlightElement(USERNAME);
-		USERNAME.sendKeys(userName);
+		
+		try {
+			
+			CommonUtils.getInstance().highlightElement(USERNAME);
+			USERNAME.sendKeys(userName);
+		}catch (Exception e) {
+			
+		}
+		
 
 	}
 	public void enterPassword(String password) {
