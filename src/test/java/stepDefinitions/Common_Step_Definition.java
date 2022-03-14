@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.krish.constants.Constants;
+import com.krish.page_objects.LoginPage;
 import com.krish.utilities.CommonUtils;
 import com.krish.webdriver_manager.DriverManager;
 
@@ -53,6 +54,7 @@ public class Common_Step_Definition {
 				LOGGER.info("DRIVER is NULL. Instantiating it!");
 			    DriverManager.launchBrowser();
 			    CommonUtils.getInstance().initWebElements();
+			    login();
 			}
 			
 		}
@@ -60,6 +62,14 @@ public class Common_Step_Definition {
 			
 			e.printStackTrace();
 		}
+	}
+	
+	private void login() {
+		
+		DriverManager.getDriver().get(Constants.APP_URL);
+		LoginPage.getInstance().enterUserName(Constants.USERNAME);
+		LoginPage.getInstance().enterPassword(Constants.PASSWORD);
+		LoginPage.getInstance().clickLoginButton();
 	}
 
 

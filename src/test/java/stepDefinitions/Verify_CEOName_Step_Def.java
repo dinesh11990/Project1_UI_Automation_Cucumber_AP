@@ -26,7 +26,9 @@ public class Verify_CEOName_Step_Def {
 	public void the_user_is_logged_in_successfully_and_is_on_home_pages() {
 
 		try {
-			//login
+			
+			
+			/*//login
 			DriverManager.getDriver().get(Constants.APP_URL);
 
 
@@ -41,7 +43,7 @@ public class Verify_CEOName_Step_Def {
 			//It will retrieve the same object from the page factory, it will not retrieve any new object
 			LoginPage.getInstance().enterUserName(Constants.USERNAME);
 			LoginPage.getInstance().enterPassword(Constants.PASSWORD);
-			LoginPage.getInstance().clickLoginButton();
+			LoginPage.getInstance().clickLoginButton();*/
 
 			String url=DriverManager.getDriver().getCurrentUrl();
 

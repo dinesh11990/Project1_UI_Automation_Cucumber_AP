@@ -2,9 +2,11 @@ package stepDefinitions;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Assert;
 
 import com.krish.page_objects.HomePage;
 import com.krish.page_objects.TimesheetPage;
+import com.krish.utilities.CommonUtils;
 import com.krish.webdriver_manager.DriverManager;
 
 import cucumber.api.java.en.Given;
@@ -43,16 +45,26 @@ public class Verify_Pending_Time_Sheets {
 
 	}
 
+	//Since you have given try catch, it will show pass in green, here we see - How to fail a scenario
 	@Then("the user should see the message as \"(.*?)\"")
 	public void the_user_should_see_the_message_as(String expectedMessage) {
 		
-		String actualMessage = TimesheetPage.getInstance().getMessage();
-		if(expectedMessage.equals(actualMessage)) {
-			LOGGER.info("expected message is seen");
-		}
+		try {
+			String actualMessage = TimesheetPage.getInstance().getMessage();
+			if(expectedMessage.equals(actualMessage)) {
+				LOGGER.info("expected message is seen");
+			}
+			
+		}catch(Exception e) {
+
+			LOGGER.error(e);
+			CommonUtils.getInstance().takeScreenshot();
+			Assert.fail(e.getMessage());
+		}}
+		
+		
 		
 
 	}
 
 
-}
