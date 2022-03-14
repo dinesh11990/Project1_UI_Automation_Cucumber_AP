@@ -43,9 +43,11 @@ public class CommonUtils {
 	
 	public void initWebElements() {
 		
-		PageFactory.initElements(DriverManager.getDriver(), LoginPage.class);
-		PageFactory.initElements(DriverManager.getDriver(), HomePage.class);
-		PageFactory.initElements(DriverManager.getDriver(), DirectoryPage.class);
+		//Here we are calling the singleton design patter "getInstance()"
+		
+		PageFactory.initElements(DriverManager.getDriver(), LoginPage.getInstance());
+		PageFactory.initElements(DriverManager.getDriver(), HomePage.getInstance());
+		PageFactory.initElements(DriverManager.getDriver(), DirectoryPage.getInstance());
 	}
 
 }
