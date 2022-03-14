@@ -5,9 +5,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="features", 
+@CucumberOptions(features="features/Verify_CEO_Name.feature", 
 glue= {"stepDefinitions"},
-dryRun=false,
 monochrome=true
 )
 

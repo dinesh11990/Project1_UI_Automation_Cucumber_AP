@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import com.krish.utilities.CommonUtils;
+
 public class DirectoryPage {
 	
 	private static DirectoryPage directoryPage;
@@ -38,11 +40,12 @@ public class DirectoryPage {
 
 	
 	
-	/*
+	
 	public WebElement getJOB_TITLE() {
 		return JOB_TITLE;
 	}
 
+	/*
 	public WebElement getSEARCH() {
 		return SEARCH;
 	}
@@ -51,14 +54,17 @@ public class DirectoryPage {
 		return NAME;
 	}*/
 	
-	public void selectJobTitle(String jobTitle) {
+	
+	
+	/*public void selectJobTitle(String jobTitle) {
 		
 		Select select = new Select(JOB_TITLE);
 		select.selectByVisibleText("Chief Executive Officer");
-	}
+	}*/
 	
 	public void clickSearch() {
 		
+		CommonUtils.getInstance().highlightElement(SEARCH);
 		SEARCH.click();
 	}
 	

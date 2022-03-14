@@ -3,6 +3,8 @@ package com.krish.page_objects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.krish.utilities.CommonUtils;
+
 public class LoginPage {
 
 
@@ -55,17 +57,17 @@ public class LoginPage {
 	//Writing actions in the page class
 	
 	public void enterUserName(String userName) {
-
+		CommonUtils.getInstance().highlightElement(USERNAME);
 		USERNAME.sendKeys(userName);
 
 	}
 	public void enterPassword(String password) {
-
+		CommonUtils.getInstance().highlightElement(PASSWORD);
 		PASSWORD.sendKeys(password);
 
 	}
 	public void clickLoginButton() {
-
+		CommonUtils.getInstance().highlightElement(LOGIN_BUTTON);
 		LOGIN_BUTTON.click();
 
 	}

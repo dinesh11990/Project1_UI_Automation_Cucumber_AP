@@ -3,6 +3,8 @@ package com.krish.page_objects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.krish.utilities.CommonUtils;
+
 public class HomePage {
 	
 	
@@ -22,10 +24,11 @@ public class HomePage {
 	}
 	
 	
-	
-	
 	@FindBy(linkText = "Directory")
 	public WebElement DIRECTORY;
+	
+	@FindBy(linkText = "Time")
+	public WebElement TIME;
 
 	
 	/*
@@ -33,10 +36,19 @@ public class HomePage {
 		return DIRECTORY;
 	}*/
 	
-	
+	//Verify_CEOName
 	public void clickDirectory() {
 		
+		CommonUtils.getInstance().highlightElement(DIRECTORY);
+		
 		DIRECTORY.click();
+	}
+	
+	//Verify_Pending_Time_Sheets
+	
+	public void clickTime() {
+		CommonUtils.getInstance().highlightElement(TIME);
+		TIME.click();
 	}
 	
 	
