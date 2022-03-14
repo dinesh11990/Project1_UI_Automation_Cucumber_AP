@@ -10,7 +10,9 @@ features="features/Verify_CEO_Name.feature",
 glue= {"stepDefinitions"},
 dryRun=false,
 monochrome=true,
-plugin = {"rerun:failed_scenarios/failed_scenarios.txt"}
+//publish=true,
+//Types of Reporting: pretty, usage, html:target/cucumber-reports/report.html/json/xml
+plugin = {"rerun:failed_scenarios/failed_scenarios.txt","html:target/cucumber-reports/report.html","pretty"}
 )
 
 public class Runner {
