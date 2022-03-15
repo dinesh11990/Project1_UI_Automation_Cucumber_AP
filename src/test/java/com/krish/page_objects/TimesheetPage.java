@@ -22,11 +22,11 @@ public class TimesheetPage {
 	}
 
 	@FindBy(id="employee")
-	public WebElement EMPLOYEE_NAME;
+	private WebElement EMPLOYEE_NAME;
 	@FindBy(id="btnView")
-	public WebElement VIEW;
+	private WebElement VIEW;
 	@FindBy(xpath="//div[@class='message warning']")
-	public WebElement MESSAGE;
+	private WebElement MESSAGE;
 	
 	
 	public WebElement getCEONAME() {

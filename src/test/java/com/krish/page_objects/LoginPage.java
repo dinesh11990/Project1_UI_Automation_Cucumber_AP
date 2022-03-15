@@ -35,18 +35,18 @@ public class LoginPage {
 		return loginInstance;
 	}
 
-
+	//-------------------------------------------------------------------------------------------------------------------------------------------
 
 	@FindBy(id="txtUsername")
-	public WebElement USERNAME;
+	private WebElement USERNAME;
 	@FindBy(id="txtPassword")
-	public WebElement PASSWORD;
+	private WebElement PASSWORD;
 	@FindBy(id="btnLogin")
-	public WebElement LOGIN_BUTTON;
+	private WebElement LOGIN_BUTTON;
 
 
 	/* we need getters in order to get the methods outside the class
-	
+
 	public WebElement getUSERNAME() {
 		return USERNAME;
 	}
@@ -58,19 +58,17 @@ public class LoginPage {
 	}*/
 
 	//Writing actions in the page class
-	
-	public void enterUserName(String userName) {
-		
-		try {
-			
-			CommonUtils.getInstance().highlightElement(USERNAME);
-			USERNAME.sendKeys(userName);
-		}catch (Exception e) {
-			
-		}
-		
 
-	}
+	public void enterUserName(String userName) {
+
+try {
+
+	CommonUtils.getInstance().highlightElement(USERNAME);
+			USERNAME.sendKeys(userName);
+	}catch (Exception e) {
+
+	}}
+	
 	public void enterPassword(String password) {
 		CommonUtils.getInstance().highlightElement(PASSWORD);
 		PASSWORD.sendKeys(password);

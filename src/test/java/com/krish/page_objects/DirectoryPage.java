@@ -29,14 +29,14 @@ public class DirectoryPage {
 	
 	
 	@FindBy(id="searchDirectory_job_title")
-	public WebElement JOB_TITLE;
+	private WebElement JOB_TITLE;
 	
 	@FindBy(id="searchBtn")
-	public WebElement SEARCH;
+	private WebElement SEARCH;
 	
 	//@FindBy(xpath="select[id='searchDirectory_job_title']")      //b[contains(text(),'John Smith')]
 	@FindBy(xpath="//b[contains(text(),'John Smith')]")  
-	public WebElement NAME;
+	private WebElement NAME;
 
 	
 	

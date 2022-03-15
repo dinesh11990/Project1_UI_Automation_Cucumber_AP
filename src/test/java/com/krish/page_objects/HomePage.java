@@ -25,10 +25,10 @@ public class HomePage {
 	
 	
 	@FindBy(linkText = "Directory")
-	public WebElement DIRECTORY;
+	private WebElement DIRECTORY;
 	
 	@FindBy(linkText = "Time")
-	public WebElement TIME;
+	private WebElement TIME;
 
 	
 	/*

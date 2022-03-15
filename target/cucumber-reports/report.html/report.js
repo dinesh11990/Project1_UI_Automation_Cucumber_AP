@@ -63,7 +63,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 6932483000,
+  "duration": 10905978600,
   "status": "passed"
 });
 formatter.scenario({
@@ -103,14 +103,14 @@ formatter.match({
   "location": "Verify_CEOName_Step_Def.the_user_is_logged_in_successfully_and_is_on_home_pages()"
 });
 formatter.result({
-  "duration": 916492800,
+  "duration": 247075800,
   "status": "passed"
 });
 formatter.match({
   "location": "Verify_CEOName_Step_Def.the_user_clicks_on_the_directory_option_from_the_menu_bars()"
 });
 formatter.result({
-  "duration": 3954265000,
+  "duration": 3891424700,
   "status": "passed"
 });
 formatter.match({
@@ -127,14 +127,14 @@ formatter.match({
   "location": "Verify_CEOName_Step_Def.the_user_selects_the_job_title_as_from_the_drop_down(String,String)"
 });
 formatter.result({
-  "duration": 244345900,
+  "duration": 210513700,
   "status": "passed"
 });
 formatter.match({
   "location": "Verify_CEOName_Step_Def.clicks_the_search_button()"
 });
 formatter.result({
-  "duration": 953068900,
+  "duration": 739762200,
   "status": "passed"
 });
 formatter.match({
@@ -147,7 +147,7 @@ formatter.match({
   "location": "Verify_CEOName_Step_Def.the_user_should_see_the_ceo_name_as(String)"
 });
 formatter.result({
-  "duration": 73258600,
+  "duration": 48951700,
   "status": "passed"
 });
 });
