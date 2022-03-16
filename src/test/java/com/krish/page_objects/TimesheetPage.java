@@ -22,21 +22,21 @@ public class TimesheetPage {
 	}
 
 	@FindBy(id="employee")
-	private WebElement EMPLOYEE_NAME;
+	public WebElement EMPLOYEE_NAME;
 	@FindBy(id="btnView")
 	private WebElement VIEW;
 	@FindBy(xpath="//div[@class='message warning']")
 	private WebElement MESSAGE;
 	
 	
-	public WebElement getCEONAME() {
-		return EMPLOYEE_NAME;
-	}
+	/*public WebElement getCEONAME(String cname) {
+		return EMPLOYEE_NAME;}*/
+	
 
 
-	public void enterEmployeeName(String name) {
+	/*public void enterEmployeeName(String name) {
 
-		EMPLOYEE_NAME.sendKeys(name);}
+		EMPLOYEE_NAME.sendKeys(name);}*/
 	
 
 	public void clickView() {

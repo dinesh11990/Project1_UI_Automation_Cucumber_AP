@@ -35,7 +35,9 @@ public class Verify_Pending_Time_Sheets {
 
 	@Given("the user enters the name as \"(.*?)\"")
 	public void the_user_enters_the_name_as(String name) {
-		TimesheetPage.getInstance().getCEONAME().sendKeys("John Smith");
+		
+		TimesheetPage.getInstance().EMPLOYEE_NAME.clear();
+		TimesheetPage.getInstance().EMPLOYEE_NAME.sendKeys(name);
 		
 	}
 

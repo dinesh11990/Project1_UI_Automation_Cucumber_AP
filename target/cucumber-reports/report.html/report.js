@@ -1,153 +1,160 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Verify_CEO_Name.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Verify_Pending_Time_Sheet.feature");
 formatter.feature({
-  "line": 1,
-  "name": "This feature is to get the CEO name from the OrangeHRM apps",
+  "line": 2,
+  "name": "This feature is to get pending timesheets",
   "description": "",
-  "id": "this-feature-is-to-get-the-ceo-name-from-the-orangehrm-apps",
-  "keyword": "Feature"
+  "id": "this-feature-is-to-get-pending-timesheets",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@timesheets"
+    }
+  ]
 });
 formatter.scenarioOutline({
-  "line": 2,
-  "name": "This test is to verify the CEO names",
+  "line": 3,
+  "name": "This test is to verify the pending timesheets",
   "description": "",
-  "id": "this-feature-is-to-get-the-ceo-name-from-the-orangehrm-apps;this-test-is-to-verify-the-ceo-names",
+  "id": "this-feature-is-to-get-pending-timesheets;this-test-is-to-verify-the-pending-timesheets",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 3,
-  "name": "the user is logged in successfully and is on Home Pages",
+  "line": 4,
+  "name": "the user is on the homepages",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 4,
-  "name": "the user clicks on the directory option from the Menu bars",
-  "keyword": "When "
-});
-formatter.step({
   "line": 5,
-  "name": "the user selects the job title as \"Chief Executive Officer\" from the drop down \"text\"",
+  "name": "the user clicks on the time option from the menus",
   "keyword": "And "
 });
 formatter.step({
   "line": 6,
-  "name": "clicks the search button",
+  "name": "the user enters the name as \"John Smith\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 7,
-  "name": "the user should see the CEO name as \"John Smith\"",
+  "name": "clicks on the view buttons",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "the user should see the message as \"messages\"",
   "keyword": "Then "
 });
 formatter.examples({
   "line": 10,
   "name": "",
   "description": "",
-  "id": "this-feature-is-to-get-the-ceo-name-from-the-orangehrm-apps;this-test-is-to-verify-the-ceo-names;",
+  "id": "this-feature-is-to-get-pending-timesheets;this-test-is-to-verify-the-pending-timesheets;",
   "rows": [
     {
       "cells": [
-        "CEO_Names"
+        "messages"
       ],
       "line": 11,
-      "id": "this-feature-is-to-get-the-ceo-name-from-the-orangehrm-apps;this-test-is-to-verify-the-ceo-names;;1"
+      "id": "this-feature-is-to-get-pending-timesheets;this-test-is-to-verify-the-pending-timesheets;;1"
     },
     {
       "cells": [
-        "John Smiths"
+        "No Timesheets Founds"
       ],
       "line": 12,
-      "id": "this-feature-is-to-get-the-ceo-name-from-the-orangehrm-apps;this-test-is-to-verify-the-ceo-names;;2"
+      "id": "this-feature-is-to-get-pending-timesheets;this-test-is-to-verify-the-pending-timesheets;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 10905978600,
+  "duration": 7346248900,
   "status": "passed"
 });
 formatter.scenario({
   "line": 12,
-  "name": "This test is to verify the CEO names",
+  "name": "This test is to verify the pending timesheets",
   "description": "",
-  "id": "this-feature-is-to-get-the-ceo-name-from-the-orangehrm-apps;this-test-is-to-verify-the-ceo-names;;2",
+  "id": "this-feature-is-to-get-pending-timesheets;this-test-is-to-verify-the-pending-timesheets;;2",
   "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 3,
-  "name": "the user is logged in successfully and is on Home Pages",
-  "keyword": "Given "
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@timesheets"
+    }
+  ]
 });
 formatter.step({
   "line": 4,
-  "name": "the user clicks on the directory option from the Menu bars",
-  "keyword": "When "
+  "name": "the user is on the homepages",
+  "keyword": "Given "
 });
 formatter.step({
   "line": 5,
-  "name": "the user selects the job title as \"Chief Executive Officer\" from the drop down \"text\"",
+  "name": "the user clicks on the time option from the menus",
   "keyword": "And "
 });
 formatter.step({
   "line": 6,
-  "name": "clicks the search button",
+  "name": "the user enters the name as \"John Smith\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 7,
-  "name": "the user should see the CEO name as \"John Smith\"",
+  "name": "clicks on the view buttons",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "the user should see the message as \"messages\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Verify_CEOName_Step_Def.the_user_is_logged_in_successfully_and_is_on_home_pages()"
+  "location": "Verify_Pending_Time_Sheets.the_user_is_on_the_homepages()"
 });
 formatter.result({
-  "duration": 247075800,
+  "duration": 735049600,
   "status": "passed"
 });
 formatter.match({
-  "location": "Verify_CEOName_Step_Def.the_user_clicks_on_the_directory_option_from_the_menu_bars()"
+  "location": "Verify_Pending_Time_Sheets.the_user_clicks_on_the_time_option_from_the_menus()"
 });
 formatter.result({
-  "duration": 3891424700,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Chief Executive Officer",
-      "offset": 35
-    },
-    {
-      "val": "text",
-      "offset": 80
-    }
-  ],
-  "location": "Verify_CEOName_Step_Def.the_user_selects_the_job_title_as_from_the_drop_down(String,String)"
-});
-formatter.result({
-  "duration": 210513700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Verify_CEOName_Step_Def.clicks_the_search_button()"
-});
-formatter.result({
-  "duration": 739762200,
+  "duration": 1228380900,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "John Smith",
-      "offset": 37
+      "offset": 29
     }
   ],
-  "location": "Verify_CEOName_Step_Def.the_user_should_see_the_ceo_name_as(String)"
+  "location": "Verify_Pending_Time_Sheets.the_user_enters_the_name_as(String)"
 });
 formatter.result({
-  "duration": 48951700,
-  "status": "passed"
+  "duration": 16895000,
+  "error_message": "java.lang.NullPointerException\r\n\tat stepDefinitions.Verify_Pending_Time_Sheets.the_user_enters_the_name_as(Verify_Pending_Time_Sheets.java:39)\r\n\tat ✽.And the user enters the name as \"John Smith\"(features/Verify_Pending_Time_Sheet.feature:6)\r\n",
+  "status": "failed"
+});
+formatter.match({
+  "location": "Verify_Pending_Time_Sheets.clicks_on_the_view_buttons()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "messages",
+      "offset": 36
+    }
+  ],
+  "location": "Verify_Pending_Time_Sheets.the_user_should_see_the_message_as(String)"
+});
+formatter.result({
+  "status": "skipped"
 });
 });
